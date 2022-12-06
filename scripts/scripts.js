@@ -18,7 +18,8 @@ window.onload = function() {
     const duration_XYZ = 100;
     const duration_CPRG = 213;
 
-    let duration = 0
+    let newCost = 0;
+    let duration = 0;
 
     /****************** helper function ******************/
     /* create a function called recalculate() which will
@@ -68,7 +69,7 @@ window.onload = function() {
         } else {
             modelText.innerHTML = model_XYZ;
         }
-        recalculate()
+        recalculate();
     }
 
     modelButton.addEventListener("click", changeModel);
@@ -93,11 +94,11 @@ window.onload = function() {
     {
         let durationText = document.getElementById("duration-text");
 
-        duration = prompt("Enter the duration:");
+        duration = parseInt(prompt("Enter the duration:"));
         durationText.innerHTML = duration;
-        recalculate()
+        recalculate();
     }
 
     changeDay.addEventListener("click", changeDuration);
 
-}
+};
