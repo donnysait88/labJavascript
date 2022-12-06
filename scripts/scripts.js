@@ -11,7 +11,7 @@ You are encouraged to use the provided naming convention for ease of review.
 
 // INSERT YOUR CODE HERE
 
-var modelName = "XYZ"
+var modelName = ""
 var duration = 0;
 
 /****************** helper function ******************/
@@ -55,18 +55,17 @@ var modelButton = document.getElementById("model-button");
 
 function changeModel() {
 
-    let modelText = document.getElementById("model-text");
+    let modelName = document.getElementById("model-text");
 
-    if (modelText.innerHTML === "Model XYZ") {
-        modelText.innerHTML = "Model CPRG";
+    if (modelName.innerHTML === "Model XYZ") {
+        modelName.innerHTML = "Model CPRG";
     } else {
-        modelText.innerHTML = "Model XYZ";
+        modelName.innerHTML = "Model XYZ";
     }
     recalculate();
 }
 
 modelButton.addEventListener("click", changeModel);
-
 
 /****************** duration button logic ******************/
 /*  - first, create a variable to represent the "Change Duration" pseudo-button.
